@@ -1,11 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
+const emailjs = lazy(() => import("@emailjs/browser"));
+
 
 const Contact = () => {
   const formRef = useRef();
