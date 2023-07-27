@@ -33,13 +33,12 @@ const App = () => {
         <Suspense fallback= {<h1>Loading....</h1>}>
           <Feedbacks />
         </Suspense>
-        
-        <div className="relative z-0">
-          <Suspense fallback= {<h1>Loading....</h1>}>
+        <Suspense fallback= {<h1>Loading....</h1>}>
+          <div className="relative z-0">
             <Contact />
-          </Suspense>
-          <StarsCanvas />
-        </div>
+            <StarsCanvas />
+          </div>
+        </Suspense>
       </div>
     </BrowserRouter>
   );
