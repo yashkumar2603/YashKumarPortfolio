@@ -1,6 +1,13 @@
-
+import {lazy, Suspense } from 'react';
 import { BrowserRouter} from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import { About, Hero, Navbar, StarsCanvas } from './components';
+import { h } from 'maath/dist/misc-7d870b3c.esm';
+
+const Contact = lazy(() => import("./components/Contact"));
+const Experience = lazy(() => import("./components/Experience"));
+const Feedbacks = lazy(() => import("./components/Feedbacks"));
+const Tech = lazy(() => import("./components/Tech"));
+const Works = lazy(() => import("./components/Works"));
 
 const App = () => {
   return (
@@ -11,12 +18,26 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Feedbacks />
+        <Suspense fallback= {<h1>Loading....</h1>}>
+          <Experience />
+        </Suspense>
+        
+        <Suspense fallback= {<h1>Loading....</h1>}>
+          <Tech />
+        </Suspense>
+        
+        <Suspense fallback= {<h1>Loading....</h1>}>
+          <Works />
+        </Suspense>
+        
+        <Suspense fallback= {<h1>Loading....</h1>}>
+          <Feedbacks />
+        </Suspense>
+        
         <div className="relative z-0">
-          <Contact />
+          <Suspense fallback= {<h1>Loading....</h1>}>
+            <Contact />
+          </Suspense>
           <StarsCanvas />
         </div>
       </div>
