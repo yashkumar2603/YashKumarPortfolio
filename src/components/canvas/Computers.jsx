@@ -11,7 +11,7 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity = {0.25} groundColor = 'black' />
       {/* <pointLight intensity={1} /> */}
       <spotLight 
-        intensity={0.05}
+        intensity={0.00}
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
@@ -22,7 +22,7 @@ const Computers = ({ isMobile }) => {
         object={computer.scene}
         scale={isMobile ? 0.5: 0.7}
         position={isMobile ? [0, -3, 0.1] : [0, -3, 0.1]}
-        rotation={[0, 0.75, 0]}
+        rotation={[0, 0.6, 0]}
       />
     </mesh>
   );
