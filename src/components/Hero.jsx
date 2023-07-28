@@ -34,7 +34,7 @@ const Hero = () => {
                 y:[0,24,0]
               }}
               transition={{
-                duration:2,
+                duration:1.5,
                 repeat: Infinity,
                 repeatType: 'loop'
               }}

@@ -1,4 +1,4 @@
-import {lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter} from 'react-router-dom';
 import { About, Hero, Navbar, StarsCanvas } from './components';
 import { h } from 'maath/dist/misc-7d870b3c.esm';
