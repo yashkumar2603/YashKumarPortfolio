@@ -37,8 +37,6 @@ const BallCanvas = ({ icon }) => {
       <Suspense fallback={<CanvasLoader />}>
         <Ball imgUrl={icon}/>
       </Suspense>
-
-      <Preload all />
     </Canvas>
   )
 }

@@ -32,8 +32,6 @@ const EarthCanvas = () => {
           enableZoom={false}
         />
         <Earth />
-
-        <Preload all />
       </Suspense>
     </Canvas>
   );
