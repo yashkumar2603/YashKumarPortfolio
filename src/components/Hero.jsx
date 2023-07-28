@@ -22,9 +22,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <Suspense fallback={<h1>3D model Loading...</h1>}>
-        <ComputersCanvas />
-      </Suspense>
+      <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
