@@ -10,7 +10,7 @@ const Ball = (props) => {
       <ambientLight intensity={0.4} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow recieveShadow scale={2.75}>
-        <icosahedronGeometry  args={[1, 1]}/>
+        <circleGeometry />
         <meshStandardMaterial 
           color="#640064"
           polygonOffset
@@ -18,8 +18,9 @@ const Ball = (props) => {
           flatShading
         />
         <Decal
-          position={[0, 0, 1]}
-          rotation={[2*Math.PI, 0, 6.25]}
+          position={[0, 0, 0]}
+          rotation={[2*Math.PI, 0,6.25]}
+          scale={1.35}
           map={decal}
         />
       </mesh>
@@ -34,7 +35,6 @@ const BallCanvas = ({ icon }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI/2} minPolarAngle={Math.PI/2}/>
         <Ball imgUrl={icon}/>
       </Suspense>
 
