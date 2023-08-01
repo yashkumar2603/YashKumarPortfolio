@@ -6,4 +6,4 @@
  Tailwind CSS
 
 <br/>
-<a href="https://yashkumar2603.github.io/YashKumarPortfolio/"><h2>Visit My Portfolio Website !!</h2></a>
+<a href="https://yashkumar2603.github.io/YashKumarPortfolio/">Visit My Portfolio Website !!</a>
